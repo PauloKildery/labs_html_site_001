@@ -396,3 +396,97 @@ O projeto poderá evoluir nas próximas aulas com:
 **Aula 01 — Front-End (HTML + CSS): concluída.**
 
 O projeto continuará evoluindo conforme o conteúdo das próximas aulas.
+
+---
+
+## 🌐 Deploy
+
+O projeto foi publicado utilizando o GitHub Pages.
+
+🔗 **Acesse o projeto online:**  
+https://paulokildery.github.io/labs_html_site_001/
+
+🔗 **Repositório no GitHub:**  
+https://github.com/PauloKildery/labs_html_site_001
+
+---
+
+## 📚 Tecnologias utilizadas
+
+- HTML5
+- CSS3
+- Flexbox
+- Media Queries
+- SVG
+- Git
+- GitHub
+- GitHub Pages
+- Figma como referência visual
+
+---
+
+## 📱 Responsividade
+
+O layout foi adaptado para diferentes tamanhos de tela utilizando Media Queries no CSS.
+
+Foram realizados testes de responsividade através do Chrome DevTools, incluindo visualizações em:
+
+- Desktop
+- Tablet — aproximadamente 768px
+- Mobile — aproximadamente 390px
+
+---
+
+## 🧠 Aprendizados da Aula 01
+
+Durante o desenvolvimento deste projeto foram praticados:
+
+- Estrutura semântica com HTML5;
+- Organização e estilização com CSS3;
+- Flexbox para posicionamento dos elementos;
+- Uso de imagens PNG e logos em SVG;
+- Efeitos de `hover`;
+- Transições e animações CSS;
+- Responsividade com Media Queries;
+- Testes utilizando Chrome DevTools;
+- Organização de arquivos e diretórios;
+- Versionamento utilizando Git;
+- Criação de repositório no GitHub;
+- Publicação do projeto utilizando GitHub Pages.
+
+> Nesta primeira etapa o projeto foi desenvolvido com foco em HTML5 e CSS3. JavaScript não foi implementado.
+
+---
+
+## 📝 Comandos Git praticados
+
+```bash
+git init
+git status
+git add .
+git commit -m "feat: implementa layout responsivo da aula 01"
+git log --oneline
+git branch -M main
+git remote -v
+git push -u origin main
+git mv
+git rm
+git push
+
+
+### Depois de colar
+
+Salve o `README.md` com **Ctrl + S**.
+
+E, se você precisa entrar na aula **agora**, pode parar aí. O site já está publicado e o README ficará atualizado localmente.
+
+Depois fazemos apenas:
+
+```bash
+git add README.md
+git commit -m "docs: adiciona informações de deploy da aula 01"
+git push
+
+O projeto poderá receber novas funcionalidades nas próximas aulas conforme a evolução dos estudos.
+
+
