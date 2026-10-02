@@ -1,0 +1,698 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   CONFIGURAÇÃO GERAL
+========================================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    background-color: #f5f5f5;
+    color: #000000;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   CONTAINER GLOBAL
+========================================================= */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+    width: 100%;
+
+    padding: 24px 0;
+
+    background-color: #ffffff;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* =========================================================
+   LOGO PRINCIPAL
+========================================================= */
+
+.logo {
+    color: #000000;
+
+    font-size: 28px;
+    font-weight: 900;
+
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   MENU DE NAVEGAÇÃO
+========================================================= */
+
+.nav-list {
+    display: flex;
+    align-items: center;
+
+    gap: 32px;
+
+    list-style: none;
+}
+
+.nav-list a {
+    position: relative;
+
+    color: #000000;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    text-decoration: none;
+}
+
+
+/* Linha amarela animada */
+
+.nav-list a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -6px;
+
+    width: 0;
+    height: 3px;
+
+    background-color: #e6c744;
+
+    border-radius: 2px;
+
+    transition: width 0.4s ease;
+}
+
+.nav-list a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================================================
+   BOTÃO SIGN UP
+========================================================= */
+
+.btn-signup {
+    display: inline-block;
+
+    padding: 12px 20px;
+
+    background-color: #000000;
+    color: #ffffff;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.4s ease,
+        background-color 0.4s ease,
+        color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.btn-signup:hover {
+    background-color: #e6c744;
+    color: #000000;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.20);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    width: 100%;
+
+    padding: 40px 0;
+
+    background-color: #ffffff;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 500px;
+
+    padding: 50px;
+
+    background-color: #f4f4f4;
+
+    border-radius: 20px;
+}
+
+
+/* =========================================================
+   TEXTO DA HERO
+========================================================= */
+
+.hero-text {
+    width: 50%;
+
+    animation: heroTextEntrada 1.2s ease-out;
+}
+
+.hero-text h1 {
+    margin-bottom: 24px;
+
+    font-size: 64px;
+    font-weight: 900;
+    line-height: 1.05;
+}
+
+.hero-text p {
+    margin-bottom: 30px;
+
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   DESTAQUES DO TÍTULO
+========================================================= */
+
+.highlight-white,
+.highlight-yellow {
+    display: inline-block;
+
+    padding: 0 10px;
+
+    transform: rotate(-2deg);
+}
+
+.highlight-white {
+    background-color: #ffffff;
+}
+
+.highlight-yellow {
+    background-color: #e6c744;
+}
+
+
+/* =========================================================
+   BOTÃO SHOP NOW
+========================================================= */
+
+.btn-shop {
+    display: inline-block;
+
+    padding: 14px 24px;
+
+    background-color: #000000;
+    color: #ffffff;
+
+    border-radius: 6px;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.8s ease-in-out,
+        box-shadow 0.8s ease-in-out,
+        background-color 0.8s ease-in-out,
+        color 0.8s ease-in-out;
+}
+
+.btn-shop:hover {
+    background-color: #e6c744;
+    color: #000000;
+
+    transform: translateY(-15px) scale(1.10);
+
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================================================
+   ÁREA DA IMAGEM DA HERO
+========================================================= */
+
+.hero-image {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 45%;
+    min-height: 400px;
+}
+
+
+/* Círculo decorativo */
+
+.hero-image::before {
+    content: "";
+
+    position: absolute;
+
+    width: 320px;
+    height: 320px;
+
+    background-color: #e6c744;
+
+    border-radius: 50%;
+
+    z-index: 0;
+}
+
+
+/* Imagem da modelo */
+
+.hero-image img {
+    position: relative;
+
+    z-index: 1;
+
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+
+    filter: drop-shadow(
+        0 20px 18px rgba(0, 0, 0, 0.15)
+    );
+
+    transition: transform 0.6s ease-in-out;
+}
+
+.hero-image img:hover {
+    transform: scale(1.20);
+}
+
+
+/* =========================================================
+   ANIMAÇÃO DE ENTRADA DA HERO
+========================================================= */
+
+@keyframes heroTextEntrada {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   SEÇÃO DE MARCAS
+========================================================= */
+
+.brands {
+    width: 100%;
+
+    padding: 30px 0;
+
+    background-color: #e6c744;
+
+    overflow: hidden;
+}
+
+.brands-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 24px;
+}
+
+
+/* =========================================================
+   ITEM INDIVIDUAL DE MARCA
+========================================================= */
+
+.brand-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 1 1 0;
+
+    min-width: 0;
+
+    font-size: 20px;
+    font-weight: 900;
+
+    color: #000000;
+}
+
+
+/* Texto provisório das marcas */
+
+.brand-item span {
+    display: inline-block;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   LOGOS DAS MARCAS
+========================================================= */
+
+.brand-logo {
+    display: block;
+
+    width: 100%;
+    max-width: 130px;
+    height: 55px;
+
+    object-fit: contain;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.45s ease,
+        filter 0.45s ease;
+}
+
+
+/* Destaque ao passar o mouse */
+
+.brand-logo:hover {
+    transform: scale(1.30);
+
+    filter: drop-shadow(
+        0 8px 8px rgba(0, 0, 0, 0.30)
+    );
+}
+
+
+/* Ajustes individuais de proporção dos logos */
+
+.brand-item:nth-child(1) .brand-logo {
+    max-width: 105px;
+}
+
+.brand-item:nth-child(2) .brand-logo {
+    max-width: 120px;
+}
+
+.brand-item:nth-child(3) .brand-logo {
+    max-width: 125px;
+}
+
+.brand-item:nth-child(4) .brand-logo {
+    max-width: 120px;
+}
+
+.brand-item:nth-child(5) .brand-logo {
+    max-width: 110px;
+}
+
+.brand-item:nth-child(6) .brand-logo {
+    max-width: 125px;
+}
+
+/* =========================================================
+   RESPONSIVIDADE - TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    /* HEADER */
+
+    .header {
+        padding: 20px 0;
+    }
+
+    .header-content {
+        gap: 20px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .nav-list {
+        gap: 18px;
+    }
+
+    .nav-list a {
+        font-size: 12px;
+    }
+
+
+    /* HERO */
+
+    .hero-content {
+        padding: 40px;
+        min-height: 450px;
+    }
+
+    .hero-text h1 {
+        font-size: 48px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+
+    .hero-image::before {
+        width: 260px;
+        height: 260px;
+    }
+
+
+    /* MARCAS */
+
+    .brands-content {
+        gap: 15px;
+    }
+
+    .brand-logo {
+        max-width: 100px;
+        height: 45px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE - CELULAR
+========================================================= */
+
+@media (max-width: 600px) {
+
+    /* CONTAINER */
+
+    .container {
+        width: 92%;
+    }
+
+
+    /* =====================================================
+       HEADER MOBILE
+    ===================================================== */
+
+    .header {
+        padding: 18px 0;
+    }
+
+    .header-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    /* O menu tradicional não cabe no celular.
+       Futuramente poderá virar um menu hambúrguer. */
+
+    .navigation {
+        display: none;
+    }
+
+    .btn-signup {
+        padding: 10px 16px;
+        font-size: 12px;
+    }
+
+
+    /* =====================================================
+       HERO MOBILE
+    ===================================================== */
+
+    .hero {
+        padding: 20px 0;
+    }
+
+    .hero-content {
+        flex-direction: column;
+
+        min-height: auto;
+
+        padding: 30px 20px;
+
+        border-radius: 16px;
+    }
+
+
+    /* TEXTO */
+
+    .hero-text {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        margin-bottom: 20px;
+
+        font-size: 42px;
+        line-height: 1.05;
+    }
+
+    .hero-text p {
+        margin-bottom: 24px;
+
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+
+    /* BOTÃO */
+
+    .btn-shop {
+        padding: 13px 22px;
+
+        font-size: 14px;
+    }
+
+    .btn-shop:hover {
+        transform: translateY(-5px) scale(1.05);
+    }
+
+
+    /* =====================================================
+       MODELO
+    ===================================================== */
+
+    .hero-image {
+        width: 100%;
+
+        min-height: 320px;
+
+        margin-top: 30px;
+    }
+
+    .hero-image::before {
+        width: 230px;
+        height: 230px;
+    }
+
+    .hero-image img {
+        width: 85%;
+        max-width: 320px;
+    }
+
+    .hero-image img:hover {
+        transform: scale(1.08);
+    }
+
+
+    /* =====================================================
+       MARCAS MOBILE
+    ===================================================== */
+
+    .brands {
+        padding: 24px 0;
+    }
+
+    .brands-content {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 24px 20px;
+    }
+
+    .brand-item {
+        width: 100%;
+    }
+
+    .brand-logo {
+        width: auto;
+
+        max-width: 105px;
+        height: 45px;
+
+        margin: 0 auto;
+    }
+
+
+    /* Padronização mobile dos tamanhos individuais */
+
+    .brand-item:nth-child(1) .brand-logo,
+    .brand-item:nth-child(2) .brand-logo,
+    .brand-item:nth-child(3) .brand-logo,
+    .brand-item:nth-child(4) .brand-logo,
+    .brand-item:nth-child(5) .brand-logo,
+    .brand-item:nth-child(6) .brand-logo {
+        max-width: 105px;
+    }
+
+
+    /* Hover menos agressivo em telas pequenas */
+
+    .brand-logo:hover {
+        transform: scale(1.15);
+    }
+}
+
+
